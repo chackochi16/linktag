@@ -26,26 +26,26 @@ ActiveRecord::Schema.define(:version => 20130107010733) do
     t.string   "number"
     t.string   "uuid"
     t.string   "user_id"
-    t.decimal  "price"
-    t.decimal  "shipping"
+    t.decimal  "price",             :precision => 10, :scale => 0
+    t.decimal  "shipping",          :precision => 10, :scale => 0
     t.string   "tracking_number"
     t.string   "phone"
     t.string   "name"
     t.date     "expiration"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
     t.integer  "payment_option_id"
   end
 
   create_table "payment_options", :force => true do |t|
-    t.decimal  "amount"
+    t.decimal  "amount",         :precision => 10, :scale => 0
     t.string   "amount_display"
     t.text     "description"
     t.string   "shipping_desc"
     t.string   "delivery_desc"
     t.integer  "limit"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
   end
 
   create_table "users", :force => true do |t|
