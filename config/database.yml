@@ -2,22 +2,22 @@ development:
   adapter: mysql2
   database: linktag_development
   pool: 5
-  username: root
-  password: qburst
-  host: localhost
+  username: 
+  password: 
+  host: 
   
 staging:
   adapter: mysql2
-  database: atlas_claims_staging
+  database: 
   pool: 5
-  username: root
-  password: matrixreloaded
-  host: atlasclaim.cuehadg7hl61.us-west-2.rds.amazonaws.com
+  username: 
+  password: 
+  host: 
   
 production:
   adapter: mysql2
-  database: atlas_claims_production
+  database: 
   pool: 5
-  username: root
-  password: matrixreloaded
-  host: atlasclaim.cuehadg7hl61.us-west-2.rds.amazonaws.com
+  username: 
+  password: 
+  host: 
