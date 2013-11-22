@@ -1,18 +1,16 @@
-<div class="gray_background">
-  <div class="wrapper clearfix">
+<div id="top-section" class="gray_background">
+  <div class="container">
     <div class="main_content <%= "payment_options" if Settings.use_payment_options %>">
       <h3>Check out</h3>
-      <p>
-        All of your payment information will be secured and stored with Amazon Payments. If you don't have an Amazon account, simply select "I'm a new Customer" on the next page.
-        <br />
-        <br />
+      <p> All of your payment information will be secured and stored with Amazon Payments. If you don't have an Amazon account, simply select "I'm a new Customer" on the next page. <br>
+        <br>
         <% if Settings.use_payment_options %>
           Select a payment option and enter your email address below.
         <% else %>
           Enter your email address below.
         <% end %>
-
       </p>
+
       <%= form_tag "/preorder/prefill", :id => "checkout" do %>
         <%= render 'preorder/payment_options' %>
         <div class="checkout_controls">
@@ -26,7 +24,18 @@
           </div>
         </div>
       <% end %>
+
+      
     </div>
-    <%= render 'preorder/checkout/sidebar' %>
+    <div class="sidebar">
+      <h5>When will I be charged?</h5>
+      <p> We recommend that you only charge backers when you can ship, otherwise your payment provider won't be happy. </p>
+    </div>
   </div>
 </div>
+
+
+
+
+
+
