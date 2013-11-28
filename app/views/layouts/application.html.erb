@@ -14,7 +14,7 @@
     <![endif]-->
 </head>
  <body>
-    <%= render 'preorder/header' %>
+    <%= yield :header %>
     <%= yield %>
     <%= render 'preorder/footer' %>
   <%= javascript_include_tag 'application' %>  

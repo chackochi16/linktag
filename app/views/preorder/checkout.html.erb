@@ -1,3 +1,14 @@
+<% content_for :header do %>
+  <div id="header" class="inner-header">
+    <div class="container">
+      <div class="row">
+          <h1 id="lockitron_header"><a href="#">Linktag</a></h1>
+        <p class="back-to-title"><a href="/">Go back</a></p>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <div id="top-section" class="gray_background">
   <div class="container">
     <div class="main_content <%= "payment_options" if Settings.use_payment_options %>">
